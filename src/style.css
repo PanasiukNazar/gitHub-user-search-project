@@ -3,7 +3,7 @@ body {
 }
 
 .theme {
-  position: absolute;
+  position: relative;
   left: 355px;
   top: 148px;
 }
@@ -22,10 +22,8 @@ body {
 }
 
 .theme-color {
-  position: relative;
+  position: absolute;
   left: 652px;
-  height: 20px;
-  width: 78px;
   display: inline-block;
 }
 
@@ -42,9 +40,63 @@ body {
 
 .theme-color-icon {
   margin: 0;
+  margin-left: 16px;
   width: 20px;
   height: 20px;
   background-size: cover;
   display: inline-block;
   background-image: url(/src/moon.png);
+}
+
+.search {
+  background-color: #fefefe;
+  position: absolute;
+  left: 355px;
+  top: 218px;
+  width: 730px;
+  height: 79px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  border: 1px solid #fefefe;
+  border-radius: 20px;
+}
+
+.search-icon {
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  margin-left: 32px;
+  margin-top: 23px;
+  margin-bottom: 22px;
+  margin-right: 24px;
+}
+
+.search-text {
+  position: absolute;
+  height: 25px;
+  left: 10.96%;
+  right: 54.25%;
+  top: calc(50% - 12.5px);
+  border: #fefefe;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.search-button {
+  position: absolute;
+  left: 84.11%;
+  right: 1.37%;
+  top: 13.77%;
+  bottom: 13.77%;
+  border: 1px solid #0079ff;
+  background-color: #0079ff;
+  border-radius: 10px;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
 }/*# sourceMappingURL=style.css.map */

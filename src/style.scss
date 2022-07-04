@@ -1,20 +1,26 @@
 // Styles for Theme, First part
-
+$core-font-style: normal;
+$color-blue: #0079ff;
+$lightest-background-color: #fefefe;
 $light-bgcolor: #f2f2f2;
 $bold-font-color: #222731;
 $core-font-family: 'Space Mono';
 $core-font-weight: 700;
 $font-color-grey: #697c9a;
 $display-inline-block: inline-block;
+$position-left: 355px;
 
 body {
    background-color: $light-bgcolor;
 }
 
 .theme {
-   position: absolute;
-   left: 355px;
+   position: relative;
+   left: $position-left;
    top: 148px;
+   //    display: flex;
+   //    justify-content: space-around;
+   //    text-align: center;
 }
 
 .theme-word {
@@ -24,17 +30,15 @@ body {
    display: $display-inline-block;
    color: $bold-font-color;
    font-family: $core-font-family;
-   font-style: normal;
+   font-style: $core-font-style;
    font-weight: $core-font-weight;
    font-size: 26px;
    line-height: 39px;
 }
 
 .theme-color {
-   position: relative;
+   position: absolute;
    left: 652px;
-   height: 20px;
-   width: 78px;
    display: $display-inline-block;
 }
 
@@ -51,6 +55,7 @@ body {
 
 .theme-color-icon {
    margin: 0;
+   margin-left: 16px;
    width: 20px;
    height: 20px;
    background-size: cover;
@@ -59,3 +64,56 @@ body {
 }
 
 // Styles for Search, Second part
+
+.search {
+   background-color: $lightest-background-color;
+   position: absolute;
+   left: $position-left;
+   top: 218px;
+   width: 730px;
+   height: 79px;
+   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+   border: 1px solid $lightest-background-color;
+   border-radius: 20px;
+}
+
+.search-icon {
+   margin: 0;
+   width: 24px;
+   height: 24px;
+   margin-left: 32px;
+   margin-top: 23px;
+   margin-bottom: 22px;
+   margin-right: 24px;
+}
+
+.search-text {
+   position: absolute;
+   height: 25px;
+   left: 10.96%;
+   right: 54.25%;
+   top: calc(50% - 25px / 2);
+   border: $lightest-background-color;
+   font-family: $core-font-family;
+   font-style: $core-font-style;
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 25px;
+}
+
+.search-button {
+   position: absolute;
+   left: 84.11%;
+   right: 1.37%;
+   top: 13.77%;
+   bottom: 13.77%;
+   border: 1px solid $color-blue;
+   background-color: $color-blue;
+   border-radius: 10px;
+   font-family: $core-font-family;
+   font-style: $core-font-style;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 24px;
+   color: #ffffff;
+}
