@@ -1,0 +1,61 @@
+// Styles for Theme, First part
+
+$light-bgcolor: #f2f2f2;
+$bold-font-color: #222731;
+$core-font-family: 'Space Mono';
+$core-font-weight: 700;
+$font-color-grey: #697c9a;
+$display-inline-block: inline-block;
+
+body {
+   background-color: $light-bgcolor;
+}
+
+.theme {
+   position: absolute;
+   left: 355px;
+   top: 148px;
+}
+
+.theme-word {
+   margin: 0;
+   height: 39px;
+   width: 128px;
+   display: $display-inline-block;
+   color: $bold-font-color;
+   font-family: $core-font-family;
+   font-style: normal;
+   font-weight: $core-font-weight;
+   font-size: 26px;
+   line-height: 39px;
+}
+
+.theme-color {
+   position: relative;
+   left: 652px;
+   height: 20px;
+   width: 78px;
+   display: $display-inline-block;
+}
+
+.theme-color-dark {
+   margin: 0;
+   color: $font-color-grey;
+   display: $display-inline-block;
+   font-family: $core-font-family;
+   font-weight: $core-font-weight;
+   font-size: 13px;
+   line-height: 19.25px;
+   letter-spacing: 2.5px;
+}
+
+.theme-color-icon {
+   margin: 0;
+   width: 20px;
+   height: 20px;
+   background-size: cover;
+   display: $display-inline-block;
+   background-image: url(/src/moon.png);
+}
+
+// Styles for Search, Second part
