@@ -9,18 +9,32 @@ $core-font-weight: 700;
 $font-color-grey: #697c9a;
 $display-inline-block: inline-block;
 $position-left: 355px;
+$line-height: 39px;
+$font-size-big: 26px;
+$color-for-information-part: #2b3442;
+$little-line-height: 24px;
+$small-font-weight: 400;
+$font-sixteen-px: 16px;
+$light-grey-color: #4b6a9b;
+$background-border-radius: 20px;
 
 body {
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    background-color: $light-bgcolor;
 }
 
+.main {
+   flex: 1;
+   max-width: 700px;
+}
+
 .theme {
-   position: relative;
-   left: $position-left;
-   top: 148px;
-   //    display: flex;
-   //    justify-content: space-around;
-   //    text-align: center;
+   margin-bottom: 32px;
+   display: flex;
+   justify-content: space-between;
 }
 
 .theme-word {
@@ -32,12 +46,11 @@ body {
    font-family: $core-font-family;
    font-style: $core-font-style;
    font-weight: $core-font-weight;
-   font-size: 26px;
-   line-height: 39px;
+   font-size: $font-size-big;
+   line-height: $line-height;
 }
 
 .theme-color {
-   position: absolute;
    left: 652px;
    display: $display-inline-block;
 }
@@ -60,21 +73,20 @@ body {
    height: 20px;
    background-size: cover;
    display: $display-inline-block;
-   background-image: url(/src/moon.png);
+   background-image: url(/src/moon.svg);
 }
 
 // Styles for Search, Second part
 
 .search {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
    background-color: $lightest-background-color;
-   position: absolute;
-   left: $position-left;
-   top: 218px;
-   width: 730px;
-   height: 79px;
+   padding-right: 10px;
    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
-   border: 1px solid $lightest-background-color;
-   border-radius: 20px;
+   border-radius: $background-border-radius;
+   margin-bottom: 24px;
 }
 
 .search-icon {
@@ -88,32 +100,91 @@ body {
 }
 
 .search-text {
-   position: absolute;
-   height: 25px;
-   left: 10.96%;
-   right: 54.25%;
-   top: calc(50% - 25px / 2);
+   flex: 1;
    border: $lightest-background-color;
    font-family: $core-font-family;
    font-style: $core-font-style;
-   font-weight: 400;
+   font-weight: $small-font-weight;
    font-size: 18px;
-   line-height: 25px;
+   line-height: $little-line-height;
 }
 
 .search-button {
-   position: absolute;
-   left: 84.11%;
-   right: 1.37%;
-   top: 13.77%;
-   bottom: 13.77%;
+   padding: 12px 24px;
    border: 1px solid $color-blue;
    background-color: $color-blue;
    border-radius: 10px;
    font-family: $core-font-family;
    font-style: $core-font-style;
    font-weight: 700;
-   font-size: 16px;
-   line-height: 24px;
+   font-size: $font-sixteen-px;
+   line-height: $little-line-height;
    color: #ffffff;
+}
+
+//Styles for Information, Third part
+
+.information {
+   display: flex;
+   justify-content: space-betweene;
+   background-color: $lightest-background-color;
+   border-radius: $background-border-radius;
+}
+
+.information-picture {
+   margin-top: 48px;
+   margin-left: 48px;
+   margin-right: 37px;
+}
+
+.information-photo {
+   border-radius: 50%;
+}
+
+.information-user-data {
+   flex: 1;
+}
+
+.information-user-name {
+   margin-top: 44px;
+   margin-bottom: 2px;
+   font-family: $core-font-family;
+   font-style: $core-font-style;
+   font-weight: $core-font-weight;
+   font-size: $font-size-big;
+   line-height: $line-height;
+   color: $color-for-information-part;
+}
+
+.information-user-email {
+   margin-bottom: 20px;
+   color: $color-blue;
+   font-family: $core-font-family;
+   font-style: $core-font-style;
+   font-weight: $small-font-weight;
+   font-size: $font-sixteen-px;
+   line-height: $little-line-height;
+   text-decoration: none;
+}
+
+.information-user-profile {
+   font-family: $core-font-family;
+   font-style: $core-font-style;
+   font-weight: $small-font-weight;
+   font-size: $font-sixteen-px;
+   line-height: $little-line-height;
+   mix-blend-mode: normal;
+   opacity: 0.75;
+   color: $light-grey-color;
+}
+
+.date {
+   margin-top: 52px;
+   margin-right: 48px;
+   font-family: $core-font-family;
+   font-style: $core-font-style;
+   font-weight: $small-font-weight;
+   font-size: $font-sixteen-px;
+   line-height: $little-line-height;
+   color: $font-color-grey;
 }

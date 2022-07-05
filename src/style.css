@@ -1,11 +1,20 @@
 body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #f2f2f2;
 }
 
+.main {
+  flex: 1;
+  max-width: 700px;
+}
+
 .theme {
-  position: relative;
-  left: 355px;
-  top: 148px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .theme-word {
@@ -22,7 +31,6 @@ body {
 }
 
 .theme-color {
-  position: absolute;
   left: 652px;
   display: inline-block;
 }
@@ -45,19 +53,18 @@ body {
   height: 20px;
   background-size: cover;
   display: inline-block;
-  background-image: url(/src/moon.png);
+  background-image: url(/src/moon.svg);
 }
 
 .search {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   background-color: #fefefe;
-  position: absolute;
-  left: 355px;
-  top: 218px;
-  width: 730px;
-  height: 79px;
+  padding-right: 10px;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
-  border: 1px solid #fefefe;
   border-radius: 20px;
+  margin-bottom: 24px;
 }
 
 .search-icon {
@@ -71,25 +78,17 @@ body {
 }
 
 .search-text {
-  position: absolute;
-  height: 25px;
-  left: 10.96%;
-  right: 54.25%;
-  top: calc(50% - 12.5px);
+  flex: 1;
   border: #fefefe;
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 25px;
+  line-height: 24px;
 }
 
 .search-button {
-  position: absolute;
-  left: 84.11%;
-  right: 1.37%;
-  top: 13.77%;
-  bottom: 13.77%;
+  padding: 12px 24px;
   border: 1px solid #0079ff;
   background-color: #0079ff;
   border-radius: 10px;
@@ -99,4 +98,69 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: #ffffff;
+}
+
+.information {
+  display: flex;
+  justify-content: space-betweene;
+  background-color: #fefefe;
+  border-radius: 20px;
+}
+
+.information-picture {
+  margin-top: 48px;
+  margin-left: 48px;
+  margin-right: 37px;
+}
+
+.information-photo {
+  border-radius: 50%;
+}
+
+.information-user-data {
+  flex: 1;
+}
+
+.information-user-name {
+  margin-top: 44px;
+  margin-bottom: 2px;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+  color: #2b3442;
+}
+
+.information-user-email {
+  margin-bottom: 20px;
+  color: #0079ff;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.information-user-profile {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  color: #4b6a9b;
+}
+
+.date {
+  margin-top: 52px;
+  margin-right: 48px;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #697c9a;
 }/*# sourceMappingURL=style.css.map */
