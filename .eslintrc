@@ -1,8 +1,8 @@
-{
-   "extends": ["eslint-config-airbnb/base"],
+// {
+//    "extends": ["eslint-config-airbnb/base"],
 
-   "rules": {
-      "no-var": "error",
-      "quotes": ["error", "single"]
-   }
-}
+//    "rules": {
+//       "no-var": "error",
+//       "quotes": ["error", "single"]
+//    }
+// }

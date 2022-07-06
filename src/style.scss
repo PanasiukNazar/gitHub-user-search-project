@@ -18,13 +18,29 @@ $font-sixteen-px: 16px;
 $light-grey-color: #4b6a9b;
 $background-border-radius: 20px;
 $radius-ten-px: 10px;
+$cursor: pointer;
+$color-white: #ffffff;
+
+.theme-light {
+   --big-font-color: #2b3442;
+   --bg-color-info-part: #fefefe;
+   --medium-font-color: #4b6a9b;
+   --bg-core: #f6f8ff;
+}
+
+.theme-dark {
+   --big-font-color: #ffffff;
+   --bg-color-info-part: #1e2a47;
+   --medium-font-color: #ffffff;
+   --bg-core: #141d2f;
+}
 
 body {
    min-height: 100vh;
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: $light-bgcolor;
+   background-color: #f6f8ff;
 }
 
 .main {
@@ -49,14 +65,16 @@ body {
    font-weight: $core-font-weight;
    font-size: $font-size-big;
    line-height: $line-height;
+   color: var(--big-font-color);
 }
 
-.theme-color {
+.theme-color-dark {
+   cursor: $cursor;
    left: 652px;
    display: $display-inline-block;
 }
 
-.theme-color-dark {
+.theme-color-text-dark {
    margin: 0;
    color: $font-color-grey;
    display: $display-inline-block;
@@ -66,14 +84,51 @@ body {
    letter-spacing: 2.5px;
 }
 
-.theme-color-icon {
+.theme-color-icon-moon {
    margin: 0;
-   margin-left: 16px;
+   margin-left: 10px;
+   margin-bottom: -3px;
    width: 20px;
    height: 20px;
    background-size: cover;
+   background-image: url(/img/moon.svg);
    display: $display-inline-block;
-   background-image: url(/src/moon.svg);
+}
+
+.theme-color-light {
+   cursor: $cursor;
+   display: none;
+}
+
+.theme-color-text-light {
+   margin: 0;
+   color: $color-white;
+   display: $display-inline-block;
+   font-weight: $core-font-weight;
+   font-size: 13px;
+   line-height: 19.25px;
+   letter-spacing: 2.5px;
+}
+
+.theme-color-icon-sun {
+   cursor: $cursor;
+   margin: 0;
+   margin-left: 16px;
+   margin-left: 10px;
+   margin-bottom: -3px;
+   width: 20px;
+   height: 20px;
+   background-size: cover;
+   background-image: url(/img/sun.svg);
+   display: $display-inline-block;
+}
+
+.show {
+   display: inline-block;
+}
+
+.hide {
+   display: none;
 }
 
 // Styles for Search, Second part
@@ -87,6 +142,7 @@ body {
    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
    border-radius: $background-border-radius;
    margin-bottom: 24px;
+   background-color: var(--bg-color-info-part);
 }
 
 .search-icon {
@@ -100,15 +156,22 @@ body {
 }
 
 .search-text {
+   cursor: $cursor;
    outline: none;
    flex: 1;
    border: $lightest-background-color;
    font-weight: $small-font-weight;
    font-size: 18px;
    line-height: $little-line-height;
+   background-color: var(--bg-color-info-part);
+}
+
+.search-text::placeholder {
+   color: var(--medium-font-color);
 }
 
 .search-button {
+   cursor: pointer;
    padding: 12px 24px;
    border: 1px solid $color-blue;
    background-color: $color-blue;
@@ -124,6 +187,8 @@ body {
 .information {
    background-color: $lightest-background-color;
    border-radius: $background-border-radius;
+   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+   background-color: var(--bg-color-info-part);
 }
 
 .information-first-section {
@@ -152,6 +217,7 @@ body {
    font-size: $font-size-big;
    line-height: $line-height;
    color: $color-for-information-part;
+   color: var(--big-font-color);
 }
 
 .information-user-email {
@@ -170,6 +236,7 @@ body {
    mix-blend-mode: normal;
    opacity: 0.75;
    color: $light-grey-color;
+   color: var(--medium-font-color);
 }
 
 .date {
@@ -179,6 +246,7 @@ body {
    font-size: $font-sixteen-px;
    line-height: $little-line-height;
    color: $font-color-grey;
+   color: var(--medium-font-color);
 }
 
 //Style for Information, Fourth part
@@ -200,6 +268,7 @@ body {
    line-height: 19px;
    color: $light-grey-color;
    margin-bottom: 37px;
+   background-color: var(--bg-core);
 }
 
 .information-links {
@@ -209,6 +278,7 @@ body {
 
 .information-text {
    margin-bottom: 0px;
+   color: var(--big-font-color);
 }
 
 .information-numbers {
@@ -218,6 +288,7 @@ body {
    text-transform: uppercase;
    color: #2b3442;
    margin-top: 0;
+   color: var(--big-font-color);
 }
 
 .information-links a {
@@ -228,8 +299,11 @@ body {
    color: $light-grey-color;
    margin-left: 19px;
    margin-top: 19px;
+   color: var(--medium-font-color);
 }
 
 .information-links-place {
    margin-bottom: 48px;
 }
+
+//

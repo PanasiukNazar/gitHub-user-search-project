@@ -14,18 +14,22 @@
       <title>GitHub User Search</title>
    </head>
    <body>
-      <div class="main">
+      <div class="main theme-light">
          <!-- Theme -->
          <div class="theme">
             <p class="theme-word">devfinder</p>
-            <div class="theme-color">
-               <p class="theme-color-dark">DARK</p>
-               <p class="theme-color-icon"></p>
+            <div class="theme-color-dark">
+               <p class="theme-color-text-dark">DARK</p>
+               <p class="theme-color-icon-moon"></p>
+            </div>
+            <div class="theme-color-light">
+               <p class="theme-color-text-light">LIGHT</p>
+               <p class="theme-color-icon-sun"></p>
             </div>
          </div>
          <!-- Search -->
          <div class="search">
-            <img class="search-icon" src="search.png" alt="search-icon" />
+            <img class="search-icon" src="/img/search.png" alt="search-icon" />
             <input
                class="search-text"
                type="text"
@@ -39,7 +43,7 @@
                <div class="information-picture">
                   <img
                      class="information-photo"
-                     src="userPhoto.png"
+                     src="/img/userPhoto.png"
                      alt="user photo"
                   />
                </div>
@@ -58,26 +62,26 @@
             <div class="information-data">
                <div class="information-follow">
                   <div class="information-repos">
-                     <p class="information-text">Repos</p>
-                     <p class="information-numbers">8</p>
+                     <p id="a" class="information-text">Repos</p>
+                     <p id="b" class="information-numbers">8</p>
                   </div>
                   <div class="information-followers">
-                     <p class="information-text">Followers</p>
-                     <p class="information-numbers">3938</p>
+                     <p id="c" class="information-text">Followers</p>
+                     <p id="d" class="information-numbers">3938</p>
                   </div>
                   <div class="information-following">
-                     <p class="information-text">Following</p>
-                     <p class="information-numbers">9</p>
+                     <p id="e" class="information-text">Following</p>
+                     <p id="f" class="information-numbers">9</p>
                   </div>
                </div>
 
                <div class="information-links">
                   <div class="information-links-place">
-                     <img src="place.svg" alt="place" />
+                     <img src="/img/place.svg" alt="place" />
                      <a class="information-links-destination" href=""
                         >San Francisco</a
                      ><br />
-                     <img src="url.svg" alt="url" />
+                     <img src="/img/url.svg" alt="url" />
 
                      <a class="information-links-github" href=""
                         >https://github.blog</a
@@ -85,10 +89,10 @@
                   </div>
 
                   <div class="information-links-networks">
-                     <img src="twitter.png" alt="twitter" />
+                     <img src="/img/twitter.png" alt="twitter" />
                      <a class="information-links-twitter" href="">Not Aviable</a
                      ><br />
-                     <img src="office-building.svg" alt="build" />
+                     <img src="/img/office-building.svg" alt="build" />
                      <a class="information-links-email" href="">@github</a>
                   </div>
                </div>
@@ -96,5 +100,6 @@
          </div>
       </div>
       <script defer src="main.js"></script>
+      <script defer src="fetch.js"></script>
    </body>
 </html>
