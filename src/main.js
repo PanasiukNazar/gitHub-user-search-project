@@ -1,6 +1,6 @@
 const main = document.querySelector('.main');
-const themeColorDark = document.querySelector('.theme-color-dark');
-const themeColorLight = document.querySelector('.theme-color-light');
+const themeColorDark = document.querySelector('.change-dark');
+const themeColorLight = document.querySelector('.change-light');
 
 function toggelClass() {
    let isThemeLight = main.classList.contains('theme-light');
@@ -20,5 +20,4 @@ function toggelClass() {
 }
 
 themeColorDark.addEventListener('click', toggelClass);
-
 themeColorLight.addEventListener('click', toggelClass);

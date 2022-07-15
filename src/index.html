@@ -10,95 +10,118 @@
          href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Overpass:wght@700&family=Space+Mono&display=swap"
          rel="stylesheet"
       />
-      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="/src/styles/style.css" />
       <title>GitHub User Search</title>
    </head>
    <body>
       <div class="main theme-light">
-         <!-- Theme -->
-         <div class="theme">
-            <p class="theme-word">devfinder</p>
-            <div class="theme-color-dark">
-               <p class="theme-color-text-dark">DARK</p>
-               <p class="theme-color-icon-moon"></p>
-            </div>
-            <div class="theme-color-light">
-               <p class="theme-color-text-light">LIGHT</p>
-               <p class="theme-color-icon-sun"></p>
-            </div>
-         </div>
-         <!-- Search -->
-         <div class="search">
-            <img class="search-icon" src="/img/search.png" alt="search-icon" />
-            <input
-               class="search-text"
-               type="text"
-               placeholder="Search GitHub users..."
-            />
-            <input class="search-button" type="button" value="Search" />
-         </div>
-         <!-- Information first canopy-->
-         <div class="information">
-            <div class="information-first-section">
-               <div class="information-picture">
+         <!-- Block Header -->
+         <div class="header">
+            <div class="header-word">devfinder</div>
+            <div class="header-change">
+               <div class="change-dark">
+                  <p class="change-dark-word">DARK</p>
                   <img
-                     class="information-photo"
-                     src="/img/userPhoto.png"
-                     alt="user photo"
+                     class="change-dark-img"
+                     src="assets/img/moon.svg"
+                     alt=""
                   />
                </div>
-               <div class="information-user-data">
-                  <p class="information-user-name">The Octocat</p>
-                  <a class="information-user-email" href="">@octocat</a>
-                  <p class="information-user-profile">
-                     This profile has not bio
-                  </p>
-               </div>
-               <div class="information-date">
-                  <p class="date">Joined 25 Jsn 2011</p>
+               <div class="change-light">
+                  <p class="change-light-word">LIGHT</p>
+                  <img
+                     class="change-light-img"
+                     src="assets/img/sun.svg"
+                     alt=""
+                  />
                </div>
             </div>
-            <!-- Information Second canopy -->
-            <div class="information-data">
-               <div class="information-follow">
-                  <div class="information-repos">
-                     <p id="a" class="information-text">Repos</p>
-                     <p id="b" class="information-numbers">8</p>
+         </div>
+         <!-- Block Search -->
+         <div class="search">
+            <div class="search-user">
+               <img class="search-img" src="assets/img/search.png" alt="" />
+               <input
+                  class="search-input"
+                  type="text"
+                  placeholder="Search GitHub username…"
+               />
+            </div>
+            <div class="search-confirm-user">
+               <button class="search-button">Search</button>
+            </div>
+         </div>
+         <!-- Block information -->
+         <div class="information">
+            <div class="about">
+               <div class="about-img">
+                  <img class="imagen" src="assets/img/userPhoto.png" />
+               </div>
+               <div class="about-write-information">
+                  <div class="about-name">
+                     <p class="name">The Octocat</p>
+                     <a class="login" href="">@octocat</a>
                   </div>
-                  <div class="information-followers">
-                     <p id="c" class="information-text">Followers</p>
-                     <p id="d" class="information-numbers">3938</p>
+                  <div class="about-date">
+                     <p class="date">Joined 25 Jan 2011</p>
                   </div>
-                  <div class="information-following">
-                     <p id="e" class="information-text">Following</p>
-                     <p id="f" class="information-numbers">9</p>
+                  <div class="about-bio">
+                     <p class="bio">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Lorem ipsum dolor sit amet consecteturlorem
+                     </p>
                   </div>
                </div>
-
-               <div class="information-links">
-                  <div class="information-links-place">
-                     <img src="/img/place.svg" alt="place" />
-                     <a class="information-links-destination" href=""
-                        >San Francisco</a
-                     ><br />
-                     <img src="/img/url.svg" alt="url" />
-
-                     <a class="information-links-github" href=""
-                        >https://github.blog</a
-                     >
-                  </div>
-
-                  <div class="information-links-networks">
-                     <img src="/img/twitter.png" alt="twitter" />
-                     <a class="information-links-twitter" href="">Not Aviable</a
-                     ><br />
-                     <img src="/img/office-building.svg" alt="build" />
-                     <a class="information-links-email" href="">@github</a>
-                  </div>
+            </div>
+            <!-- Block Statictics -->
+            <div class="statistics">
+               <div class="statistics-repos">
+                  <p id="a" class="statistics-text">Repos</p>
+                  <p id="b" class="statistics-numbers">8</p>
+               </div>
+               <div class="statistics-followers">
+                  <p id="c" class="statistics-text">Followers</p>
+                  <p id="d" class="statistics-numbers">3938</p>
+               </div>
+               <div class="statistics-following">
+                  <p id="e" class="statistics-text">Following</p>
+                  <p id="f" class="statistics-numbers">9</p>
+               </div>
+            </div>
+            <!-- Block Links -->
+            <div class="links">
+               <div class="location">
+                  <img
+                     class="location-img"
+                     src="assets/img/place.svg"
+                     alt="location"
+                  />
+                  <p class="location-text">San Francisco</p>
+               </div>
+               <div class="network">
+                  <img
+                     class="network-logo"
+                     src="assets/img/twitter.png"
+                     alt="network"
+                  />
+                  <p class="network-text">Not Avilable</p>
+               </div>
+               <div class="organization">
+                  <img
+                     class="organization-logo"
+                     src="assets/img/office-building.svg"
+                     alt="organization"
+                  />
+                  <a class="organization-text" href="">@github</a>
+               </div>
+               <div class="blog">
+                  <img class="blog-img" src="assets/img/url.svg" alt="blog" />
+                  <a class="blog-link" href="">https://github.blog</a>
                </div>
             </div>
          </div>
       </div>
+      <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <script defer src="main.js"></script>
       <script defer src="fetch.js"></script>
    </body>
