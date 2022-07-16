@@ -259,8 +259,31 @@ body {
   color: var(--medium-font-color);
 }
 
+.links a {
+  color: #4b6a9b;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  text-decoration: none;
+  margin-left: 20px;
+  color: var(--medium-font-color);
+}
+
+.location {
+  display: flex;
+  max-width: 155px;
+}
+
 .location-text {
   text-overflow: ellipsis;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.location-img {
+  width: 14px;
+  height: auto;
 }
 
 .network-text {
@@ -270,16 +293,6 @@ body {
 
 .network-logo {
   opacity: 0.5;
-}
-
-.links a {
-  color: #4b6a9b;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 20px;
-  text-decoration: none;
-  margin-left: 20px;
-  color: var(--medium-font-color);
 }
 
 .blog {

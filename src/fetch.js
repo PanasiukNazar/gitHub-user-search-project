@@ -21,7 +21,7 @@ function send() {
       .then((data) => {
          fetch(data.organizations_url)
             .then((organization) => organization.json())
-            .then((dataOrganization) => {
+            .then((dataOrganizations) => {
                $userName.textContent = data.name;
                $userLogin.textContent = data.login;
                $userPhoto.setAttribute('src', data.avatar_url);
@@ -41,7 +41,7 @@ function send() {
                   ? ($network.textContent = 'Not Avilable')
                   : ($network.textContent = data.twitter_username);
 
-               dataOrganization === null
+               dataOrganizations.length === 0
                   ? ($organization.textContent = 'Not Avilable')
                   : ($organization.textContent =
                        dataOrganization[0] && dataOrganization[0].login);

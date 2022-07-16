@@ -1,3 +1,6 @@
+import './styles/style.css';
+import './fetch.js';
+
 const main = document.querySelector('.main');
 const themeColorDark = document.querySelector('.change-dark');
 const themeColorLight = document.querySelector('.change-light');
@@ -13,7 +16,7 @@ function toggelClass() {
    } else {
       main.classList.add('theme-light');
       main.classList.remove('theme-dark');
-      document.body.style.backgroundColor = '#F6F8FF';
+      document.body.style.backgroundColor = '#f2f2f2';
       themeColorDark.classList.remove('hide');
       themeColorLight.classList.remove('show');
    }
