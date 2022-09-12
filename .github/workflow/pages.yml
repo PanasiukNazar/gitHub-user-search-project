@@ -1,0 +1,38 @@
+name: User Search
+
+on:
+   push:
+      branches:
+         - master
+
+jobs:
+   name: Build
+   runs-on: ubuntu-latests
+
+   steps:
+      - uses: action/checkout@v3
+      - uses: action/setup-node@v3
+        with:
+           node-version: 16
+
+      - run: npm ci
+
+      - run: npm run build-production
+
+deploy:
+   name: Deploy
+   runs-on: ubuntu-latests
+   needs: build
+
+   permissions:
+      pages: write
+      id-token: write
+
+  environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+  steps: 
+    - uses: actions/deploy-pages@v1
+      with: 
+        artifact_name: dist
