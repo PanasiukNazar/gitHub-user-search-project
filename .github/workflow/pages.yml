@@ -1,41 +1,41 @@
-name: User Search
+name: Deployment to pages
 
 on:
-   push:
-      branches:
-         - master
+  push:
+    branches:
+      - master
 
 jobs:
-   build:
-      name: Build
-      runs-on: ubuntu-latests
+  build:
+    name: Build
+    runs-on: ubuntu-latests
 
-      steps:
-         - uses: action/checkout@v3
-         - uses: action/setup-node@v3
-         with:
-            node-version: 16
+    steps:
+      - uses: action/checkout@v3
+      - uses: action/setup-node@v3
+        with:
+          node-version: 16
 
-         - run: npm ci
+      - run: npm ci
 
-         - run: npm run build-production
+      - run: npm run build-production
 
-       - uses: actions/upload-pages-artifact@v1
-           with:
-              path: ${{ github.workspace }}/dist
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: ${{ github.workspace }}/dist
 
-deploy:
-   name: Deploy
-   runs-on: ubuntu-latests
-   needs: build
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latests
+    needs: build
 
-   permissions:
+    permissions:
       pages: write
       id-token: write
 
-  environment:
+    environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
-  steps: 
-    - uses: actions/deploy-pages@v1
+    steps:
+      - uses: actions/deploy-pages@v1
