@@ -6,18 +6,19 @@ on:
          - master
 
 jobs:
-   name: Build
-   runs-on: ubuntu-latests
+   build:
+      name: Build
+      runs-on: ubuntu-latests
 
-   steps:
-      - uses: action/checkout@v3
-      - uses: action/setup-node@v3
-        with:
-           node-version: 16
+      steps:
+         - uses: action/checkout@v3
+         - uses: action/setup-node@v3
+         with:
+            node-version: 16
 
-      - run: npm ci
+         - run: npm ci
 
-      - run: npm run build-production
+         - run: npm run build-production
 
        - uses: actions/upload-pages-artifact@v1
            with:
